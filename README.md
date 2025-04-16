@@ -60,41 +60,7 @@ df_dropped
 df.fillna({'GENDER':'MALE','NAME':'SRI','ADDRESS':'POONAMALEE','M1':98,'M2':87,'M3':76,'M4':92,'TOTAL':305,'AVG':89.999999})
 ```
 ![image](https://github.com/user-attachments/assets/df324dba-dbbe-4434-91f1-0764bd29a4a4)
-```
-ir=pd.read_csv("/content/iris.csv")
-ir
-```
-![image](https://github.com/user-attachments/assets/9a5d79a2-c201-4583-abc3-1f12d766634b)
-```
-ir.describe()
-```
-![image](https://github.com/user-attachments/assets/1368e355-4ce7-4a85-ad86-95f2ab6f8006)
-```
-import seaborn as sns
-sns.boxplot(x='sepal_width',data=ir)
-```
-![image](https://github.com/user-attachments/assets/0b536965-0526-421a-8e8e-0e8ad50c1235)
-```
-q1=ir.sepal_width.quantile(0.25)
-q3=ir.sepal_width.quantile(0.75)
-iq=q3-q1
-print(q3)
-```
-![image](https://github.com/user-attachments/assets/fa24c854-b7a4-4d54-99c6-fbbc9d1165ce)
-```
-rid=ir[((ir.sepal_width<(q1-1.5*iq))|(ir.sepal_width>(q3+1.5*iq)))]
-rid['sepal_width']
-```
-![image](https://github.com/user-attachments/assets/7a0fa550-a716-49ce-9a40-b9a37771e292)
-```
-delid=ir[~((ir.sepal_width<(q1-1.5*iq))|(ir.sepal_width>(q3+1.5*iq)))]
-delid
-```
-![image](https://github.com/user-attachments/assets/c73e5dd8-2901-4e93-8563-ef0b5a8829d8)
-```
-sns.boxplot(x='sepal_width',data=delid)
-```
-![image](https://github.com/user-attachments/assets/91649573-ab34-4482-96ff-715ae2a7e476)
+
 ```
 import matplotlib.pyplot as plt
 import pandas as pd
